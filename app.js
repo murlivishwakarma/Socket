@@ -20,7 +20,7 @@ const io = new Server(server, {
 io.on("connection", (socket) => {
   console.log("User connected");
   console.log("id", socket.id);
-  socket.emit("welcome", new Welcome to server, ${socket.id});
+  socket.emit("welcome", `new Welcome to server, ${socket.id}`);
   socket.broadcast.emit("welcome", socket.id, " joined the server");
 
   socket.on("privateMessage", ({ otherId, message }) => {
